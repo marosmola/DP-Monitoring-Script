@@ -35,3 +35,6 @@ Výstup: ...
 
 ## PostGis
 - https://postgis.net/workshops/postgis-intro/spatial_relationships.html
+
+## GEO Json
+- https://geojson.org/

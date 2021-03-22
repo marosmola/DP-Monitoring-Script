@@ -22,7 +22,7 @@ Výstup: ...
 ## Shapely
 - https://shapely.readthedocs.io/en/latest/index.html
 - https://shapely.readthedocs.io/en/latest/manual.html#delaunay-triangulation
-
+- https://automating-gis-processes.github.io/2017/lessons/L3/point-in-polygon.html
 
 ## Scikit learn
 - https://scikit-learn.org/stable/modules/clustering.html#clustering
@@ -38,3 +38,14 @@ Výstup: ...
 
 ## GEO Json
 - https://geojson.org/
+- https://leafletjs.com/examples/geojson/
+- https://pypi.org/project/geojson/
+- https://tools.ietf.org/html/rfc7946
+
+## GeoPandas
+- https://geopandas.org/index.html
+- https://geopandas.org/docs/reference/api/geopandas.GeoSeries.intersects.html?highlight=intersect
+
+## More resources
+- https://kodu.ut.ee/~kmoch/geopython2019/index.html
+- http://geoviews.org/

@@ -2,3 +2,7 @@ __pycache__/
 
 # Python env
 .venv
+
+# ipython
+.ipynb_checkpoints
+

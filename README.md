@@ -49,3 +49,7 @@ Výstup: ...
 ## More resources
 - https://kodu.ut.ee/~kmoch/geopython2019/index.html
 - http://geoviews.org/
+
+## Polygon creation
+- https://nominatim.openstreetmap.org/ui/search.html
+- http://polygons.openstreetmap.fr/index.py

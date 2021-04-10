@@ -19,6 +19,61 @@ Výstup: ...
 
 
 
+
+
+# Gathering Data
+
+## Download GML Data from 2020
+https://data.gov.sk/en/dataset/system-identifikacie-polnohospodarskych-pozemkov-lpis/resource/47d0d516-53f3-4a4b-899c-12a1cd9233de
+
+Data geo format: `ESRI:102067`
+
+https://spatialreference.org/ref/sr-org/czech-s-jtsk-gis-esri102067/
+
+
+## Convert to geojson
+```sh
+ogr2ogr -f "GeoJSON" kulturne_diely.geojson KD_2020_20200423.gml
+```
+
+## Fix encoding
+
+Change encoding with recode (Not really working as expected)
+```sh
+recode -f UTF-8..cp1250 kulturne_diely.geojson -v
+```
+
+Fix encoding manually
+```sh
+sed -i 's/Ă„Ĺą/ď/g' kulturne_diely.geojson
+sed -i 's/ÄąÄ„/ť/g' kulturne_diely.geojson
+sed -i 's/Ă„Ĺš/Č/g' kulturne_diely.geojson
+sed -i 's/ÄąÄľ/ž/g' kulturne_diely.geojson
+sed -i 's/Ä‚Ĺˇ/Ú/g' kulturne_diely.geojson
+sed -i 's/ÄąËť/Ž/g' kulturne_diely.geojson
+sed -i 's/ÄąË‡/š/g' kulturne_diely.geojson
+sed -i 's/Ä‚Ĺź/ú/g' kulturne_diely.geojson
+sed -i 's/Ă„Ëť/Ľ/g' kulturne_diely.geojson
+sed -i 's/Ă„Äľ/ľ/g' kulturne_diely.geojson
+sed -i 's/Ä‚Ë‡/á/g' kulturne_diely.geojson
+sed -i 's/Ă„Ĺ¤/č/g' kulturne_diely.geojson
+sed -i 's/ÄąÂ/ň/g'  kulturne_diely.geojson
+sed -i 's/Ä‚Ëť/ý/g' kulturne_diely.geojson
+sed -i 's/Ä‚Â´/ô/g' kulturne_diely.geojson
+sed -i 's/Ä‚Â©/é/g' kulturne_diely.geojson
+sed -i 's/Ä‚Â/í/g'  kulturne_diely.geojson
+sed -i 's/Ä‚Ĺ‚/ó/g' kulturne_diely.geojson
+```
+
+```sh
+sed -i 's/ň /Š/g'   kulturne_diely.geojson
+sed -i 's/"í/"Á/g'  kulturne_diely.geojson
+sed -i 's/í¤/ä/g'   kulturne_diely.geojson
+```
+
+
+# Resources
+
 ## Shapely
 - https://shapely.readthedocs.io/en/latest/index.html
 - https://shapely.readthedocs.io/en/latest/manual.html#delaunay-triangulation
